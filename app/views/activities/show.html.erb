@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @activity.name %>
+</p>
+
+<p>
+  <strong>Before weight:</strong>
+  <%= @activity.before_weight %>
+</p>
+
+<p>
+  <strong>Before weight with water:</strong>
+  <%= @activity.before_weight_with_water %>
+</p>
+
+<p>
+  <strong>After weight:</strong>
+  <%= @activity.after_weight %>
+</p>
+
+<p>
+  <strong>After weight with water:</strong>
+  <%= @activity.after_weight_with_water %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @activity.date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @activity.description %>
+</p>
+
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %>

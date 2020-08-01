@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Before weight</th>
+      <th>Before weight with water</th>
+      <th>After weight</th>
+      <th>After weight with water</th>
+      <th>Date</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= activity.name %></td>
+        <td><%= activity.before_weight %></td>
+        <td><%= activity.before_weight_with_water %></td>
+        <td><%= activity.after_weight %></td>
+        <td><%= activity.after_weight_with_water %></td>
+        <td><%= activity.date %></td>
+        <td><%= activity.description %></td>
+        <td><%= link_to 'Show', activity %></td>
+        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Activity', new_activity_path %>
